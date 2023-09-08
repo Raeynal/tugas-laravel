@@ -15,7 +15,7 @@ use App\Http\Controllers\PerpustakaanController;
 */
 
 
-Route::get('/',[Routecontroller::class, 'index']);
+// Route::get('/',[Routecontroller::class, 'index']);
 
 Route::get('/form',[Routecontroller::class, 'form']);
 
@@ -27,3 +27,25 @@ Route::get('/perpustakaan/anggota', [PerpustakaanController::class, 'anggota'])-
 Route::get('/perpustakaan/buku', [PerpustakaanController::class, 'buku'])->name('get_buku');
 
 Route::get('/perpustakaan/petugas', [PerpustakaanController::class, 'petugas'])->name('get_petugas');
+
+Route::get('/', function() {
+    return view('layout.master');
+}); 
+Route::get('/formanggota', function() {
+    return view('formanggota');
+}); 
+Route::get('/formbuku', function() {
+    return view('formbuku');
+}); 
+Route::get('/formpetugas', function() {
+    return view('formpetugas');
+}); 
+Route::get('/datapetugas', function() {
+    return view('datapetugas');
+}); 
+Route::get('/dataanggota', function() {
+    return view('dataanggota');
+}); 
+Route::get('/databuku', function() {
+    return view('databuku');
+}); 
